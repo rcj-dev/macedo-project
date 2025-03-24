@@ -1,1 +1,13 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+.quicksand {
+  font-family: "Quicksand", sans-serif;
+  font-style: normal;
+}
+
+.font-navbar {
+  font-weight: 700;
+  color: #1F3457;
+  font-size: 16px;
+}
