@@ -22,14 +22,14 @@ const Navbar = () => {
 
       {/* Links do menu */}
       <ul
-        className={`absolute md:static top-16 left-0 w-full md:w-auto bg-white md:bg-transparent flex flex-col md:flex-row md:items-center gap-5 md:gap-10 p-5 md:p-0 transition-all duration-300 ${
+        className={`absolute md:static top-16 left-0 w-full md:w-auto bg-white md:bg-transparent flex flex-col md:flex-row md:items-center gap-5 md:gap-10 p-5 md:p-0 ${
           isOpen ? "block justify-center items-center" : "hidden md:flex"
         }`}
       >
-        <li><a href="">Início</a></li>
-        <li><a href="">Quem Somos</a></li>
-        <li><a href="">Tratamentos</a></li>
-        <li><a href="">Consultório</a></li>
+        <li><a href="" className="transition-all duration-600 text-[#1F3457]">Início</a></li>
+        <li><a href="" className="transition-all duration-600 hover:text-[#1F3457]">Quem Somos</a></li>
+        <li><a href="" className="transition-all duration-600 hover:text-[#1F3457]">Tratamentos</a></li>
+        <li><a href="" className="transition-all duration-600 hover:text-[#1F3457]">Consultório</a></li>
       </ul>
 
       {/* Botão */}

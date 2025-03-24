@@ -8,6 +8,11 @@
 
 .font-navbar {
   font-weight: 700;
-  color: #1F3457;
+  color: #A0A0A0;
+  font-size: 16px;
+}
+
+.font-navbar-button {
+  font-weight: 700;
   font-size: 16px;
 }
