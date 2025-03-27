@@ -1,13 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Logo from "../assets/logos/Logo-Navbar.svg";
 import ButtonNavbar from "./Buttons/ButtonNavbar";
 import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef(null); // Referência para detectar clique fora
+
+  // Fecha o menu ao clicar fora
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    }
+
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen]);
 
   return (
-    <nav className="quicksand font-navbar flex items-center justify-between px-5 md:px-7 py-5 relative w-full">
+    <nav ref={menuRef} className="md:h-auto quicksand font-navbar flex items-center justify-between px-5 md:px-7 py-5 w-full fixed top-0 left-0 z-50 bg-[#F2F8FF] bg-opacity-30 backdrop-blur-sm">
       {/* Logo */}
       <img src={Logo} alt="Logo Macedo Clínicas" className="w-32 md:w-35" />
 
@@ -22,14 +42,13 @@ const Navbar = () => {
 
       {/* Links do menu */}
       <ul
-        className={`absolute md:static top-16 left-0 w-full md:w-auto bg-white md:bg-transparent flex flex-col md:flex-row md:items-center gap-5 md:gap-10 p-5 md:p-0 ${
-          isOpen ? "block justify-center items-center" : "hidden md:flex"
-        }`}
+        ref={menuRef}
+        className={`text-[20px] md:text-[16px] md:flex flex flex-col md:flex-row md:items-center gap-5 md:gap-10 ${isOpen ? "block" : "hidden"}`}
       >
-        <li><a href="" className="transition-all duration-600 text-[#1F3457]">Início</a></li>
-        <li><a href="" className="transition-all duration-600 hover:text-[#1F3457]">Quem Somos</a></li>
-        <li><a href="" className="transition-all duration-600 hover:text-[#1F3457]">Tratamentos</a></li>
-        <li><a href="" className="transition-all duration-600 hover:text-[#1F3457]">Consultório</a></li>
+        <li><a href="#" className="transition-all duration-600 text-[#1F3457]">Início</a></li>
+        <li><a href="#" className="transition-all duration-600 hover:text-[#1F3457]">Quem Somos</a></li>
+        <li><a href="#" className="transition-all duration-600 hover:text-[#1F3457]">Tratamentos</a></li>
+        <li><a href="#" className="transition-all duration-600 hover:text-[#1F3457]">Consultório</a></li>
       </ul>
 
       {/* Botão */}

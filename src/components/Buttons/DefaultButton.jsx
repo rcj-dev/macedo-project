@@ -6,7 +6,8 @@ const DefaultButton = () => {
     <button className="
     quicksand 
     font-button 
-    w-65 
+    md:w-65 
+    w-[75%]
     h-9.5 
     rounded-[8px] 
     transition-all 

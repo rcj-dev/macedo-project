@@ -11,6 +11,9 @@ createRoot(document.getElementById('root')).render(
     <Layout>
       <Navbar />
       <Inicio />
+      <Inicio />
+      <Inicio />
+
     </Layout>
 
   </StrictMode>,

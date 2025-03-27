@@ -4,10 +4,10 @@ import Doutora from '../assets/images/PerfilDra.png'
 
 const Inicio = () => {
   return (
-    <section className="w-[85%] sm:w-full h-auto quicksand flex flex-col-reverse sm:flex-row items-center justify-center gap-8 sm:gap-12 py-10 sm:px-8 sm:py-15 -mt-15">
+    <section className="w-[85%] sm:w-full h-auto quicksand flex flex-col-reverse sm:flex-row items-center justify-center gap-8 sm:gap-12 py-10 sm:px-8 sm:py-15 mt-10 md:mt-5">
       {/* Text and Button Container */}
       <div className="w-full sm:w-150 flex flex-col items-center sm:items-start gap-6 sm:gap-8">
-        <h1 className="font-h1 text-[#1F3457] text-5xl sm:text-5xl md:text-6xl font-bold leading-tight text-center lg:w-120 sm:text-left w-[calc(100%+30px)] sm:w-auto">
+        <h1 className="font-h1 text-[#1F3457] text-5xl sm:text-5xl md:text-6xl font-bold leading-tight text-center lg:w-120 sm:text-left w-[calc(100%+20px)] sm:w-auto">
           A arte de sorrir e se sentir bem comeca aqui!
         </h1>
         <DefaultButton />

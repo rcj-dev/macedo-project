@@ -15,7 +15,9 @@ const ButtonNavbar = () => {
     hover:bg-[#1F3457] 
     hover:text-white
     hover:cursor-pointer 
-    text-[#1F3457]">
+    text-[#1F3457]
+    
+    ">
       Contato
     </button>
   )
