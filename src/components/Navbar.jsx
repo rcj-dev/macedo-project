@@ -7,12 +7,12 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="quicksand font-navbar flex items-center justify-between px-5 md:px-7 py-5 relative">
+    <nav className="quicksand font-navbar flex items-center justify-between px-5 md:px-7 py-5 relative w-full">
       {/* Logo */}
       <img src={Logo} alt="Logo Macedo Clínicas" className="w-32 md:w-35" />
 
       {/* Menu Mobile - Ícone Hamburguer */}
-      <div className="md:hidden">
+      <div className="md:hidden text-[#1F3457]">
         {isOpen ? (
           <X className="w-8 h-8 cursor-pointer" onClick={() => setIsOpen(false)} />
         ) : (
